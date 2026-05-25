@@ -1,14 +1,23 @@
-void main(){
-
+class Pessoa {
   bool ativo = true;
   double peso = 70;
   int idade = 18;
-  String nome = "Antônio", sobrenome = "Rocha da Silva";
+  final String nome = "Antônio", sobrenome = "Rocha da Silva";
   String? nacionalidade; // = "Brasileiro"
 
-  print("Nome completo: $nome $sobrenome");
-  print("$idade ${idade >= 18 ? "Maior de idade" : "Menor de idade"}");
-  print("Situação: ${ativo == true ? "Ativo" : "Inativo"}");
-  print("Peso: $peso");
-  print("Nacionalidade: ${nacionalidade != null ? nacionalidade : "Nao informada"}");
+  @override
+  String toString() {
+    return "Nome: $nome,"
+        "Sobrenome: $sobrenome, "
+        "Idade: ${idade >= 18 ? 'Maior de idade' : 'Menor de idade'}, "
+        "Peso: $peso, "
+        "Situação: ${ativo == true ? 'Ativo' : 'Inativo'},"
+        "Nacionalidade: ${nacionalidade != null ? '$nacionalidade' : 'Nao informada'}";
+  }
+}
+
+void main() {
+  Pessoa pessoa = Pessoa();
+
+  print(pessoa);
 }
