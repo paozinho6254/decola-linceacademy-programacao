@@ -7,12 +7,12 @@ class Pessoa {
 
   @override
   String toString() {
-    return "Nome: $nome,"
+    return "Nome: $nome, "
         "Sobrenome: $sobrenome, "
         "Idade: ${idade >= 18 ? 'Maior de idade' : 'Menor de idade'}, "
         "Peso: $peso, "
-        "Situação: ${ativo == true ? 'Ativo' : 'Inativo'},"
-        "Nacionalidade: ${nacionalidade != null ? '$nacionalidade' : 'Nao informada'}";
+        "Situação: ${ativo ? 'Ativo' : 'Inativo'},"
+        "Nacionalidade: ${nacionalidade ?? 'Nao informada'}";
   }
 }
 
