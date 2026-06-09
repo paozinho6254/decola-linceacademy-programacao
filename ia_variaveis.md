@@ -1,6 +1,6 @@
-Algumas perguntas que fiz para LLM's como estudo da linguagem Dart
+#Algumas perguntas que fiz para LLM's como estudo da linguagem Dart
 
-1ª interação com IA (Ferramenta utilizada: ChatGPT)
+#1ª interação com IA (Ferramenta utilizada: ChatGPT)
 Pergunta: Em Dart, quais cuidados devo ter ao criar variáveis que podem receber null?
 Resposta: É importante usar variáveis nulas apenas quando realmente fizer sentido no contexto do programa. Sempre tente validar o valor antes de utilizá-lo, usando operadores como ?, ?? e !. Isso evita erros de execução relacionados a valores nulos inesperados.
 
@@ -16,7 +16,7 @@ Resposta: Evite nomes genéricos como x ou valor1, não utilize tipos desnecessa
 Pergunta: Como funciona o método split() nas strings em Dart?
 Resposta: O método split() divide um texto em partes usando um separador. Por exemplo, ao usar uma vírgula como separador, a string é transformada em uma lista de palavras ou valores separados por vírgula.
 
-2ª interação com IA (Ferramenta utilizada: ChatGPT)
+#2ª interação com IA (Ferramenta utilizada: ChatGPT)
 Pergunta: Por que um Map é mais adequado do que uma List para armazenar países e capitais?
 Resposta: Um Map foi criado para armazenar relações do tipo chave → valor.
 
@@ -126,3 +126,104 @@ for(var item in paisCapital.entries){
 Fluxo:
 
 Por isso muitos programadores preferem entries quando precisam trabalhar simultaneamente com chave e valor.
+
+#3ª interação com IA (Ferramenta utilizada: ChatGPT)
+
+Pergunta: Por que devo evitar usar dynamic nos parâmetros de uma função?
+
+Resposta:
+
+O dynamic remove a verificação de tipos feita pelo compilador.
+
+Exemplo:
+
+void dobrar(dynamic valor) {
+  print(valor * 2);
+}
+
+Isso funciona:
+
+dobrar(10);
+
+Mas isso pode gerar erro:
+
+dobrar("Antônio");
+
+Dependendo da operação realizada.
+
+Uma alternativa mais segura:
+
+void dobrar(int valor) {
+  print(valor * 2);
+}
+
+Agora o Dart avisa o erro antes de executar.
+
+Pergunta: Posso chamar uma função dentro dela mesma?
+
+Resposta:
+
+Sim. Isso é chamado de recursão.
+
+Exemplo:
+
+void contagem(int numero) {
+  if (numero == 0) {
+    return;
+  }
+
+  print(numero);
+  contagem(numero - 1);
+}
+
+Resultado:
+
+5
+4
+3
+2
+1
+
+A função chama ela mesma até atingir uma condição de parada.
+
+Pergunta: Quando devo usar parâmetros obrigatórios, opcionais e nomeados?
+
+Resposta: Obrigatórios
+
+Quando a informação é essencial.
+
+void cadastrarUsuario(String nome)
+
+Não existe usuário sem nome.
+
+Opcionais
+
+Quando existe valor padrão ou a informação não é necessária.
+
+void exibirMensagem(String texto, [bool maiusculo = false])
+
+Uso:
+
+exibirMensagem("Olá");
+
+ou
+
+exibirMensagem("Olá", true);
+Nomeados
+
+Quando existem muitos parâmetros.
+
+void criarConta({
+  required String nome,
+  required String email,
+  int idade = 0,
+})
+
+Uso:
+
+criarConta(
+  nome: "Antônio",
+  email: "antonio@email.com",
+);
+
+Fica muito mais legível.
