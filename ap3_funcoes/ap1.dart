@@ -3,8 +3,8 @@ import 'dart:math';
 final aleatorio = Random();
 
 void main(){
-  List <int> lista1 = List.generate(5, (_) => aleatorio.nextInt(100)+1);
-  List <int> lista2 = List.generate(5, (_) => aleatorio.nextInt(100)+1);
+  List <int> lista1 = List.generate(5, (_) => aleatorio.nextInt(101));
+  List <int> lista2 = List.generate(5, (_) => aleatorio.nextInt(101));
   
   imprimeLista(lista1);
   imprimeLista(lista2);
