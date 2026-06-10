@@ -45,15 +45,15 @@ String convertHexadecimal(int temperatura) {
   return hexadecimal;
 }
 
-void imprimirConversoes(List<int> numeros) {
-  numeros.sort();
+void imprimirConversoes(List<int> temperaturas) {
+  temperaturas.sort();
 
-  for (int numero in numeros) {
+  for (int temperatura in temperaturas) {
     print(
-      'decimal: $numero, '
-      'binário: ${convertBinario(numero)}, '
-      'octal: ${convertOctal(numero)}, '
-      'hexadecimal: ${convertHexadecimal(numero)}',
+      'decimal: $temperatura, '
+      'binário: ${convertBinario(temperatura)}, '
+      'octal: ${convertOctal(temperatura)}, '
+      'hexadecimal: ${convertHexadecimal(temperatura)}',
     );
   }
 }
