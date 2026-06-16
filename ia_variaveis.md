@@ -1,6 +1,6 @@
-#Algumas perguntas que fiz para LLM's como estudo da linguagem Dart
+# Algumas perguntas que fiz para LLM's como estudo da linguagem Dart
 
-#1ª interação com IA (Ferramenta utilizada: ChatGPT)
+# 1ª interação com IA (Ferramenta utilizada: ChatGPT)
 Pergunta: Em Dart, quais cuidados devo ter ao criar variáveis que podem receber null?
 Resposta: É importante usar variáveis nulas apenas quando realmente fizer sentido no contexto do programa. Sempre tente validar o valor antes de utilizá-lo, usando operadores como ?, ?? e !. Isso evita erros de execução relacionados a valores nulos inesperados.
 

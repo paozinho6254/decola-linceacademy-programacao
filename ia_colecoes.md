@@ -1,4 +1,4 @@
-#2ª interação com IA (Ferramenta utilizada: ChatGPT)
+# 2ª interação com IA (Ferramenta utilizada: ChatGPT)
 Pergunta: Por que um Map é mais adequado do que uma List para armazenar países e capitais?
 Resposta: Um Map foi criado para armazenar relações do tipo chave → valor.
 

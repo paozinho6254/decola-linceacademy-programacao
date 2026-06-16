@@ -1,4 +1,4 @@
-#3ª interação com IA (Ferramenta utilizada: ChatGPT)
+# 3ª interação com IA (Ferramenta utilizada: ChatGPT)
 
 Pergunta: Por que devo evitar usar dynamic nos parâmetros de uma função?
 
