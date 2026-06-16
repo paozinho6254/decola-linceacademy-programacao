@@ -25,8 +25,16 @@ void main() {
   }
 
 
+  Animal animal = Cachorro();
 
-
+  (animal as Cachorro).latir();
 }
 
 
+class Animal {}
+
+class Cachorro extends Animal {
+  void latir() {
+    print("Au au");
+  }
+}
