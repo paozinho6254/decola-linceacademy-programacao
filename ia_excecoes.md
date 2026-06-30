@@ -1,6 +1,6 @@
 # Algumas perguntas que fiz para LLM's como estudo da linguagem Dart
 
-# 6ª interação com IA (Ferramenta utilizada: ChatGPT)
+# 7ª interação com IA (Ferramenta utilizada: ChatGPT)
 
 Pergunta: Qual a finalidade do rethrow em um código?
 
