@@ -20,7 +20,7 @@ Future<void> verificarStatusEntrega(String codigoRastreamento) async {
   print('Status de entrega do pacote $codigoRastreamento: $status');
 }
 
-void main() async{
+Future<void> main() async{
   print('Inicio');
   await verificarStatusEntrega('ABC123');
   await verificarStatusEntrega('XYZ789');
